@@ -162,7 +162,7 @@ int main (int argc, char **argv)
         //printf("%c%d %d%c\n", position, where, value, close);
         if(position == 'b')
             board[i][j] = value;
-        //printf("%d %d %d %d\n", where, i, j, value);
+        printf("%d %d %d\n", i, j, value);
     }
     
     for (i = 1 ; i <= row ; i++) {
