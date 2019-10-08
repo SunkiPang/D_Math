@@ -159,10 +159,11 @@ int main (int argc, char **argv)
     for (z = 0 ; z < (row-1)*(col-1) ; z++) {
         fscanf(fin,"%s %c%d%c%d %s %s", b, &position, &i, &position, &j, b, b);
         fscanf(fin, " %d%c", &value, &close );
-        //printf("%c%d %d%c\n", position, where, value, close);
+        //printf("%c%d %d%c\n",  position, where, value, close);
+        printf("%d %d %d\n", i, j, value);
         if(position == 'b')
             board[i][j] = value;
-        printf("%d %d %d\n", i, j, value);
+        
     }
     
     for (i = 1 ; i <= row ; i++) {
