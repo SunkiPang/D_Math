@@ -166,8 +166,8 @@ int main (int argc, char **argv)
         
     }
     
-    for (i = 1 ; i <= row ; i++) {
-            for (j = 1 ; j <= col ; j++) {
+    for (i = 0 ; i < row - 1 ; i++) {
+            for (j = 0 ; j < col - 1 ; j++) {
                     printf("%d ", board[i][j]) ;
             }
             printf("\n") ;
