@@ -23,7 +23,7 @@ int main (int argc, char **argv)
         }
         col ++;
      }
-    printf("%d %d\n", row, col); // Debugging - 1
+    //printf("%d %d\n", row, col); // Debugging - 1
     fclose(fpc);
 
   //row 와 column은 알게됨.
@@ -70,10 +70,11 @@ int main (int argc, char **argv)
     
     printf("\n \n");
     for(int i=0;i<row;i++){
-      for(int j=0;j<col;j++)
-        printf("%d ",a[i][j]);
-      printf("\n");
-      }
+        for(int j=0;j<col;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
     printf("\n \n");
 
 
