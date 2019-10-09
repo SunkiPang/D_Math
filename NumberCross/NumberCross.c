@@ -27,7 +27,7 @@ int main (int argc, char **argv)
         else if(buffer == '\n'){
             row++;
             col = col_buffer;
-            col_buffer=0;
+            col_buffer=1;
             //continue;
         }
         else if(buffer != '\0'){
