@@ -11,21 +11,45 @@ int main (int argc, char **argv)
 
 
     int row=0,col=0;
+    
+    
+    while(1){
+        c = fgetc(fpc);
+        if(feof(fpc)) break;
+        if(c==' ') {
+            col++; already = 0;
+            continue;
+        }
+        if(c=='\n'){
+            row++; col=0;
+            continue;
+        }
+        if(c!='\0'){
 
+            already = 1;
+        }
+    }
+    
+    
+/*
     while(1){
         fgets(buffer, sizeof(buffer), fpc);
         if(feof(fpc))
             break;
         row++;
-        for (int i = 0; (row == 0) &&i < sizeof(buffer); i++){
+        for (int i = 0; (row == 0) && i < sizeof(buffer); i++){
             if(!((buffer[i] == ' ')||(buffer[i]== '\n')))
                 col++;
         }
         col ++;
      }
-    //printf("%d %d\n", row, col); // Debugging - 1
+ 
+ */
+    printf("%d %d\n", row, col); // Debugging - 1
     fclose(fpc);
 
+    
+    
   //row 와 column은 알게됨.
     a=(int**)malloc((row) * sizeof (int*));
     for (int j = 0; j < row; j++)
@@ -161,7 +185,7 @@ int main (int argc, char **argv)
         fscanf(fin,"%s %c%d%c%d %s %s", b, &position, &i, &close, &j, b, b);
         fscanf(fin, " %d%c", &value, &close );
         //printf("%c%d %d%c\n",  position, where, value, close);
-        printf("%c %d %d %d\n", position, i, j, value);
+        //printf("%c %d %d %d\n", position, i, j, value);
         if(position == 'b')
             board[i-1][j] = value;
         
