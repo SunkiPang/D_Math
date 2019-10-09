@@ -9,7 +9,8 @@ int main (int argc, char **argv)
   int **a=NULL;
     char buffer[500];
 
-
+    char c = 0;
+    int already = 0;
     int row=0,col=0;
     
     
