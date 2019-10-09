@@ -20,8 +20,9 @@ int main (int argc, char **argv)
         buffer = fgetc(fpc);
         if(feof(fpc)) break;
         if(buffer == ' ') {
-            col_buffer++;
             flag = 0;
+            if(flag == 1)
+                col_buffer++;
             //continue;
         }
         else if(buffer == '\n'){
