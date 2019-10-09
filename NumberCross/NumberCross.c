@@ -11,7 +11,8 @@ int main (int argc, char **argv)
 
     char buffer = 0;
     int flag = 0;
-    int row=0,col=0; col_buffer
+    int row=0,col=0;
+    int col_buffer = 0;
     
     
     
