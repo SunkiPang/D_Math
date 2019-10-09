@@ -161,7 +161,7 @@ int main (int argc, char **argv)
         fscanf(fin,"%s %c%d%c%d %s %s", b, &position, &i, &position, &j, b, b);
         fscanf(fin, " %d%c", &value, &close );
         //printf("%c%d %d%c\n",  position, where, value, close);
-        //printf("%s %c %d %d %d\n", b, position, i, j, value);
+        printf("%c %d %d %d\n", position, i, j, value);
         //if(position == 'b')
             board[i-1][j] = value;
         
