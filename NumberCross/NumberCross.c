@@ -158,7 +158,7 @@ int main (int argc, char **argv)
     }
     
     for (z = 0 ; z < (row-1)*(col-1) ; z++) {
-        fscanf(fin,"%s %c%d%c%d %s %s", b, &position, &i, &position, &j, b, b);
+        fscanf(fin,"%s %c%d%c%d %s %s", b, &position, &i, &close, &j, b, b);
         fscanf(fin, " %d%c", &value, &close );
         //printf("%c%d %d%c\n",  position, where, value, close);
         printf("%c %d %d %d\n", position, i, j, value);
