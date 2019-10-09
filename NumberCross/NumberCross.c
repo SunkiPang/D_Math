@@ -11,20 +11,22 @@ int main (int argc, char **argv)
 
     char buffer = 0;
     int flag = 0;
-    int row=0,col=0;
+    int row=0,col=0; col_buffer
+    
     
     
     while(1){
         buffer = fgetc(fpc);
         if(feof(fpc)) break;
         if(buffer == ' ') {
-            col++;
+            col_buffer++;
             flag = 0;
             //continue;
         }
         else if(buffer == '\n'){
             row++;
-            col=0;
+            col = col_buffer;
+            col_buffer=0;
             //continue;
         }
         else if(buffer != '\0'){
