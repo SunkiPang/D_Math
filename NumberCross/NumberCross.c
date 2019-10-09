@@ -7,27 +7,29 @@ int main (int argc, char **argv)
   FILE * fp = fopen("formula", "w") ;
   FILE * fpc = fopen(argv[1],"r");
   int **a=NULL;
-    char buffer[500];
+    //char buffer[500];
 
-    char c = 0;
-    int already = 0;
+    char buffer = 0;
+    int flag = 0;
     int row=0,col=0;
     
     
     while(1){
-        c = fgetc(fpc);
+        buffer = fgetc(fpc);
         if(feof(fpc)) break;
-        if(c==' ') {
-            col++; already = 0;
-            continue;
+        if(buffer == ' ') {
+            col++;
+            flag = 0;
+            //continue;
         }
-        if(c=='\n'){
-            row++; col=0;
-            continue;
+        else if(buffer == '\n'){
+            row++;
+            col=0;
+            //continue;
         }
-        if(c!='\0'){
+        else if(buffer != '\0'){
 
-            already = 1;
+            flag = 1;
         }
     }
     
